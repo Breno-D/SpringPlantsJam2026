@@ -44,7 +44,7 @@ public class TurretCombat : MonoBehaviour
             foreach(GameObject enemyGo in WaveManager.instance.enemiesInWave)
             {
                 float currentDistance = Vector2.Distance(transform.position, enemyGo.transform.position);
-                if(currentDistance < minDistance)
+                if(currentDistance < minDistance && currentDistance < turret.range)
                 {
                     minDistance = currentDistance;
                     target = enemyGo;

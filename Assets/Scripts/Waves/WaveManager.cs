@@ -55,6 +55,10 @@ public class WaveManager : MonoBehaviour
             }
         }
         currentWave++;
+        if(currentWave > waves.Count)
+        {
+            currentWave = waves.Count;
+        }
         stilSpawningEnemies = false;
         yield return null;
     }
