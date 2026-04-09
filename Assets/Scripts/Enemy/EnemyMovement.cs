@@ -40,7 +40,7 @@ public class EnemyMovement : MonoBehaviour
     {
         float distanceToTarget = Vector2.Distance(transform.position, nextTarget.transform.position);
         
-        if(distanceToTarget <= 0.05f)
+        if(distanceToTarget <= 0.15f)
         {
             currTarget++;
             if(currTarget > targetsList.Count - 1)
